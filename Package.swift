@@ -16,10 +16,10 @@ let package = Package(
             targets: ["AccessibilitySnapshot"]
         ),
         .library(
-            name: "FBSnapshotTestCase+Accessibility",
+            name: "FBSnapshotTestCase-Accessibility",
             targets: [
-                "FBSnapshotTestCase+Accessibility",
-                "FBSnapshotTestCase+Accessibility-ObjC",
+                "FBSnapshotTestCase-Accessibility",
+                "FBSnapshotTestCase-Accessibility-ObjC",
             ]
         ),
         .library(
@@ -55,13 +55,13 @@ let package = Package(
             path: "Sources/AccessibilitySnapshot/SnapshotTesting"
         ),
         .target(
-            name: "FBSnapshotTestCase+Accessibility",
+            name: "FBSnapshotTestCase-Accessibility",
             dependencies: ["AccessibilitySnapshotCore", "iOSSnapshotTestCase"],
             path: "Sources/AccessibilitySnapshot/iOSSnapshotTestCase/Swift"
         ),
         .target(
-            name: "FBSnapshotTestCase+Accessibility-ObjC",
-            dependencies: ["AccessibilitySnapshotCore", "iOSSnapshotTestCase", "FBSnapshotTestCase+Accessibility"],
+            name: "FBSnapshotTestCase-Accessibility-ObjC",
+            dependencies: ["AccessibilitySnapshotCore", "iOSSnapshotTestCase", "FBSnapshotTestCase-Accessibility"],
             path: "Sources/AccessibilitySnapshot/iOSSnapshotTestCase/ObjC"
         ),
     ]
